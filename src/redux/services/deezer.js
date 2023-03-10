@@ -7,9 +7,11 @@ export const deezerApi = createApi({
   }),
   endpoints: (builder) => ({
     getTopChart: builder.query({ query: () => '/chart' }),
+    getAlbumTracks: builder.query({ query: (albumId) => `/album/${albumId}/tracks` }),
   }),
 });
 
 export const {
   useGetTopChartQuery,
+  useGetAlbumTracksQuery,
 } = deezerApi;

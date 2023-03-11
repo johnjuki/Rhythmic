@@ -35,7 +35,7 @@ const TopAlbumCard = ({ album, i }) => (
   //   };
   // });
 
-  <div className="w-full flex flex-row items-center hover:bg-[#4c426e] py-2 p-4 rounded-lg cursor-pointer mb-2">
+  <div className="w-full flex flex-row items-center py-2 p-4 rounded-lg  mb-2">
     <h3 className="font-bold text-base text-white mr-3">{i + 1}.</h3>
     <div className="flex-1 flex flex-row justify-between item-center">
       <img
@@ -44,12 +44,12 @@ const TopAlbumCard = ({ album, i }) => (
         alt={album.title}
       />
       <div className="flex-1 flex flex-col justify-center mx-3">
-        <Link to={`/songs/${album.id}`}>
+        {/* <Link to={`/songs/${album.id}`}> */}
           <p className="text-xl font-bold text-white">{album.title}</p>
-        </Link>
-        <Link to={`/artists/${album.artist.id}`}>
+        {/* </Link> */}
+        {/* <Link to={`/artists/${album.artist.id}`}> */}
           <p className="text-base text-white w-fit">{album.artist.name}</p>
-        </Link>
+        {/* </Link> */}
       </div>
     </div>
     {/* <PlayPause
@@ -87,9 +87,9 @@ const TopPlay = () => {
       <div className="w-full flex flex-col">
         <div className="flex flex-row justify-between items-center">
           <h2 className="text-white font-bold text-2xl">Top Albums</h2>
-          <Link to="/top-charts">
-            <p className="text-gray-300 text-base cursor-pointer">See more</p>
-          </Link>
+          {/* <Link to="/top-charts"> */}
+            {/* <p className="text-gray-300 text-base cursor-pointer">See more</p> */}
+          {/* </Link> */}
         </div>
 
         <div className="mt-4 flex flex-col gap-1">
@@ -105,9 +105,9 @@ const TopPlay = () => {
         <div className="w-full flex flex-col mt-8">
           <div className="flex flex-row justify-between items-center">
             <h2 className="text-white font-bold text-2xl">Top Artists</h2>
-            <Link to="/top-artists">
-              <p className="text-gray-300 text-base cursor-pointer">See more</p>
-            </Link>
+            {/* <Link to="/top-artists"> */}
+              {/* <p className="text-gray-300 text-base cursor-pointer">See more</p> */}
+            {/* </Link> */}
           </div>
 
           <Swiper
@@ -126,13 +126,13 @@ const TopPlay = () => {
                 style={{ width: '25%', height: 'auto' }}
                 className="shadow-lg rounded-full animate-slideright"
               >
-                <Link to={`/artists/${artist[1].id}`}>
+                {/* <Link to={`/artists/${artist[1].id}`}> */}
                   <img
                     src={artist[1].picture}
                     alt={artist[1].name}
                     className="rounded-full w-full object-cover"
                   />
-                </Link>
+                {/* </Link> */}
               </SwiperSlide>
             ))}
 
